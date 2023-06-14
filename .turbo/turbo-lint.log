@@ -1,0 +1,5 @@
+yarn run v1.22.19
+warning ..\package.json: No license field
+$ next lint
+✔ No ESLint warnings or errors
+Done in 5.97s.
