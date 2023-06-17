@@ -2,7 +2,7 @@ import React from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 
-const page = () => {
+const Home = () => {
   return (
     <div className='p-5'>
       {/* ver si se puede aplicar flex-1 al contenido y al body colocarle flex  y quitar ese p-*/}
@@ -20,7 +20,7 @@ const page = () => {
   )
 }
 
-export default page
+export default Home
 
 
 
