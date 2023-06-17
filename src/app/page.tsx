@@ -11,7 +11,7 @@ const Home = () => {
         Sunt atque labore assumenda dolor in, eius cumque doloribus voluptatibus quas aspernatur explicabo repellat nihil quos libero at error recusandae tempore neque itaque! Dolore perferendis eum ullam rem, officiis eos!
         Nobis, consequuntur nesciunt voluptas rerum sequi quae nisi minus, tempora exercitationem repellendus praesentium accusamus minima! Nisi optio officia, doloremque et, sit quidem dolorum eaque accusantium adipisci quod tempora amet. Provident?
         Nam tempora eaque voluptatem asperiores ab? Voluptates fuga ullam vero cupiditate quos praesentium ea ipsum nemo fugit mollitia, cum rem? Deserunt veniam sunt inventore ad. Perferendis expedita praesentium cum incidunt!
-        Nam tempora eaque voluptatem asperiores ab? 
+        Nam tempora eaque voluptatem asperiores ab? asdfasdf
       </p>}
 
     </div>
