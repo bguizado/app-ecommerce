@@ -1,15 +1,11 @@
 import React from 'react'
-import Image from 'next/image'
-import Header from '../componentes/header'
+import Footer from '@/components/Footer'
+import Header from '../components/Header'
 
 const page = () => {
   return (
     <>
-    <Header></Header>
-    <Header></Header>
-    <Header></Header>
-    <Header></Header>
-    
+    <Footer></Footer>
     </>
   )
 }
