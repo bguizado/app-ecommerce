@@ -28,27 +28,6 @@ const Header = () => {
             height={24}
           />
         </div>
-        <section className="flex w-full h-20 items-end">
-          <div className="flex w-full mb-2 overflow-x-auto ml-3">
-            <div className="flex space-x-3">
-              <div className="w-20 h-8 bg-orange-300 rounded-full flex items-center justify-center text-sm text-white font-medium">
-                <p>Todos</p>
-              </div>
-              <div className="w-24 h-8 bg-gray-300 rounded-full flex items-center justify-center text-sm t text-gray-500 font-medium">
-                <p>Monitores</p>
-              </div>
-              <div className="w-24 h-8 bg-gray-300 rounded-full flex items-center justify-center text-sm text-gray-500 font-medium">
-                <p>Periféricos</p>
-              </div>
-              <div className="w-24 h-8 bg-gray-300 rounded-full flex items-center justify-center text-sm text-gray-500 font-medium">
-                <p>Parlantes</p>
-              </div>
-              <div className="w-24 h-8 bg-gray-300 rounded-full flex items-center justify-center text-sm  text-gray-500 font-medium">
-                <p>Laptops</p>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );
