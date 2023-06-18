@@ -6,19 +6,57 @@ import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
 
 const Home = () => {
+  const [isTodosClicked, setIsTodosClicked] = useState(true);
   const [isMonitoresClicked, setIsMonitoresClicked] = useState(false);
+  const [isPerifericosClicked, setIsPerifericosClicked] = useState(false);
+  const [isTecladosClicked, setIsTecladosClicked] = useState(false);
+
+  const handleClickTodos = () => {
+    setIsTodosClicked(true);
+    setIsMonitoresClicked(false);
+    setIsPerifericosClicked(false);
+    setIsTecladosClicked(false);
+  };
 
   const handleClickMonitores = () => {
+    setIsTodosClicked(false);
     setIsMonitoresClicked(true);
+    setIsPerifericosClicked(false);
+    setIsTecladosClicked(false);
+  };
+
+  const handleClickPerifericos = () => {
+    setIsTodosClicked(false);
+    setIsMonitoresClicked(false);
+    setIsPerifericosClicked(true);
+    setIsTecladosClicked(false);
+  };
+
+  const handleClickTeclados = () => {
+    setIsTodosClicked(false);
+    setIsMonitoresClicked(false);
+    setIsPerifericosClicked(false);
+    setIsTecladosClicked(true);
   };
   return (
     <>
     <section className="flex w-full h-20 items-end">
     <div className="flex w-full mb-2 overflow-x-auto ml-3">
      <div className="flex space-x-3">
-        <HeaderBotones text="Todos" className={isMonitoresClicked ? 'bg-gray-300 text-gray-500 w-20' : 'bg-orange-300 text-white w-20'} onClick={handleClickMonitores}/>
+        <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
+          onClick={handleClickTodos}/>
         <HeaderBotones text="Monitores"  className={isMonitoresClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
           onClick={handleClickMonitores}/>
+        <HeaderBotones
+          text="Periféricos"
+          className={isPerifericosClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+          onClick={handleClickPerifericos}
+        />
+        <HeaderBotones
+          text="Teclados"
+          className={isTecladosClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+          onClick={handleClickTeclados}
+        />
     </div>
     </div>
     </section>
