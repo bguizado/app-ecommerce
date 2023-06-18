@@ -60,7 +60,7 @@ const Home = () => {
     </div>
     </div>
     </section>
-    <div className='p-5'>
+    <div className='pl-5 pr-5 pb-5'>
       {/* ver si se puede aplicar flex-1 al contenido y al body colocarle flex  y quitar ese p-*/}
       {<p>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae iste eos quisquam nam magnam. Inventore culpa, facere cum distinctio dolorum saepe est molestias, placeat animi, impedit repellat aliquid asperiores? Mollitia.
