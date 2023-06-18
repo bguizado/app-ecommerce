@@ -1,9 +1,27 @@
-import React from 'react'
+'use client'
+
+import React,{ useState } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
+import HeaderBotones from '@/components/HeaderBotones'
 
 const Home = () => {
+  const [isMonitoresClicked, setIsMonitoresClicked] = useState(false);
+
+  const handleClickMonitores = () => {
+    setIsMonitoresClicked(true);
+  };
   return (
+    <>
+    <section className="flex w-full h-20 items-end">
+    <div className="flex w-full mb-2 overflow-x-auto ml-3">
+     <div className="flex space-x-3">
+        <HeaderBotones text="Todos" className={isMonitoresClicked ? 'bg-gray-300 text-gray-500 w-20' : 'bg-orange-300 text-white w-20'} onClick={handleClickMonitores}/>
+        <HeaderBotones text="Monitores"  className={isMonitoresClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+          onClick={handleClickMonitores}/>
+    </div>
+    </div>
+    </section>
     <div className='p-5'>
       {/* ver si se puede aplicar flex-1 al contenido y al body colocarle flex  y quitar ese p-*/}
       {<p>
@@ -15,8 +33,8 @@ const Home = () => {
         Nam tempora eaque voluptatem asperiores ab? Voluptates fuga ullam vero cupiditate quos praesentium ea ipsum nemo fugit mollitia, cum rem? Deserunt veniam sunt inventore ad. Perferendis expedita praesentium cum incidunt!
         Nam tempora eaque voluptatem asperiores ab? asdfasdf
       </p>}
-
     </div>
+    </>
   )
 }
 
