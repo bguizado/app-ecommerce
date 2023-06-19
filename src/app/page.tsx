@@ -1,11 +1,10 @@
-import React from 'react'
+// import React from 'react'
+import { ListOfProducts } from './api/api'
 
-const page = () => {
+export default async function PostProducts () {
   return (
-    <div>page</div>
+    <section>
+      <ListOfProducts />
+    </section>
   )
 }
-
-export default page
-
-// https://run.mocky.io/v3/86b83581-4018-4a80-966f-ee108dc60d54git 
