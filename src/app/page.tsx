@@ -1,7 +1,7 @@
 // import React from 'react'
-import { ListOfProducts } from './api/api'
+import { ListOfProducts } from '../api/api'
 
-export default async function PostProducts () {
+export default async function ListProducts () {
   return (
     <section>
       <ListOfProducts />
