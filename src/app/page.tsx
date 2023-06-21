@@ -1,10 +1,7 @@
-// import React from 'react'
-import { ListOfProducts } from '../api/api'
+import React from "react";
 
-export default async function ListProducts () {
-  return (
-    <section>
-      <ListOfProducts />
-    </section>
-  )
-}
+const page = () => {
+  return <div>page</div>;
+};
+
+export default page;
