@@ -7,10 +7,6 @@ export async function getProducts() {
   return products;
 }
 
-// const api = () => {
-//   return fetch(url).then((res) => res.json());
-// };
-
 // export async function ListOfProducts() {
 //   const products = await api();
 //   return (
