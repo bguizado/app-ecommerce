@@ -7,4 +7,6 @@ export interface Products {
   valoracion: number;
   imagen1: string;
   imagen2: string;
+  categoria: string;
+  clase: string;
 }

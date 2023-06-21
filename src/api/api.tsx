@@ -13,6 +13,8 @@ export async function ListOfProducts() {
     <>
       {products.map((product: Products) => (
         <div key={product.id}>
+          <p>{product.tipos.at(0).categoria}</p>
+          <p>{product.tipos.at(0).clase}</p>
           <p>{product.nombre}</p>
           <p>{product.marca}</p>
           <p>{product.descripcion}</p>
