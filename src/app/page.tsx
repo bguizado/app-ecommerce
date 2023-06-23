@@ -3,13 +3,13 @@ import Cards from "@/components/Cards";
 
 const Home = () => {
   return (
-    <div className='p-5'>
+    <main>
 
       <Cards />
       <Cards />
       <Cards />
 
-    </div>
+    </main>
   )
 }
 
