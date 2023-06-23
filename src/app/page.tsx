@@ -4,6 +4,7 @@ import React,{ useState } from 'react'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
+import Buscador from '@/components/Buscador'
 
 const Home = () => {
   const [isTodosClicked, setIsTodosClicked] = useState(true);
@@ -40,6 +41,7 @@ const Home = () => {
   };
   return (
     <>
+    <Buscador/> 
     <section className="flex w-full h-20 items-end">
     <div className="flex w-full mb-2 overflow-x-auto ml-3">
      <div className="flex space-x-3">
