@@ -17,7 +17,7 @@ const Header = () => {
 
         <div className="w-full h-18 flex justify-end space-x-5 mr-2 items-center">
           <Image
-            className="h-6 w-7"
+            className="h-6 w-6"
             src="/CarritoDeCompras.png"
             width={500}
             height={500}
