@@ -1,14 +1,10 @@
 import React from "react";
-import Cards from "@/components/Cards";
+import Products from "@/components/Products";
 
 const Home = () => {
   return (
     <main>
-
-      <Cards />
-      <Cards />
-      <Cards />
-
+      <Products />
     </main>
   )
 }
