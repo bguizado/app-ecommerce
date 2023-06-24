@@ -9,4 +9,5 @@ export interface IProducts {
   imagen2: string;
   categoria: string;
   clase: string;
+  tipos: any;
 }
