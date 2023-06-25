@@ -1,5 +1,10 @@
+"use client"
+import { useState } from "react"
+
+
 
 function Carritocompras() {
+  const [numpro , setnumpro] = useState(1)
   return (
 
     <div className="flex flex-shrink-0 w-108 h-28 border-b-2 border-b-gray-300 justify-around items-center"> 
@@ -8,14 +13,14 @@ function Carritocompras() {
         <h2 className="text-lg tex-neutral-500 justify-center w-35 h-7 flex-nowrap font-bold">Monitor Benq EL2870U</h2>
         <p className="tex-sm w-30 h-8"> S./ 2000.30</p>
       </div>
-      <div className="">
-        <button className="text-2xl w-3.5 h-9 text-center font-normal">
+      <div className="flex-col">
+        <button className="text-2xl w-3.5 h-9 text-center font-normal" onClick={() => { setnumpro (numpro +1)}} >
         +
         </button> <hr />
         <p className="text-lg font-normal text-center">
-          1
+          {numpro}
         </p> <hr />
-        <button className="text-2xl w-3 h-9 text-center font-normal">
+        <button className="text-2xl w-3 h-9 text-center font-normal" onClick={() => setnumpro( numpro -1 )}>
           -
         </button>
       </div>
