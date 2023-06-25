@@ -7,10 +7,10 @@ export async function Products() {
   const products = await getProducts();
 
   return (
-    <div className="bg-white">
+    <section className="bg-white">
       <div className="mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8">
         <h2 className="mt-10">Productos en oferta</h2>
-        <div className="-mx-px grid grid-cols-2 border-l border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+        <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
           {products
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "oferta"
@@ -22,7 +22,7 @@ export async function Products() {
             ))}
         </div>
         <h2 className="mt-10">Productos recomendados</h2>
-        <div className="-mx-px grid grid-cols-2 border-l border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+        <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
           {products
             .filter(
               (product: IProducts) =>
@@ -35,7 +35,7 @@ export async function Products() {
             ))}
         </div>
         <h2 className="mt-10">Productos destacados</h2>
-        <div className="-mx-px grid grid-cols-2 border-l border-gray-200 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+        <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
           {products
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "destacado"
@@ -47,7 +47,7 @@ export async function Products() {
             ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

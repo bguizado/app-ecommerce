@@ -11,7 +11,7 @@ export function Cards(props: any) {
   const product = props.product;
 
   return (
-    <div className="group relative border-b border-r border-gray-200 p-4 sm:p-6">
+    <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-6">
       <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-75">
         <Image
           src={product.imagen1}
@@ -22,7 +22,7 @@ export function Cards(props: any) {
           priority={true}
         />
       </div>
-      <div className="pb-4 pt-10 text-center">
+      <div className="pb-4 pt-0.5 pl-0.5 text-left sm:text-center">
         <h3 className="text-sm font-medium text-gray-900">
           <a href={product.href}>
             <span aria-hidden="true" className="absolute inset-0" />
