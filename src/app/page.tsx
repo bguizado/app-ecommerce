@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <>
     <Buscador/> 
-    <section className="flex w-full h-20 items-end">
+    <section className="flex w-full h-20 items-end lg:hidden">
     <div className="flex w-full mb-2 overflow-x-auto ml-3">
      <div className="flex space-x-3">
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
