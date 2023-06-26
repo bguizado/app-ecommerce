@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
 
@@ -12,18 +11,18 @@ export function Cards(props: any) {
 
   return (
     <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-6">
-      <div className="aspect-h-1 aspect-w-1 overflow-hidden rounded-lg bg-gray-200 group-hover:opacity-75">
+      <div>
         <Image
           src={product.imagen1}
           alt={`imagen de ${product.nombre}`}
-          className="h-full w-full object-fill object-center"
+          className="h-[90%] w-[90%] object-fill object-center"
           width={500}
           height={500}
           priority={true}
         />
       </div>
       <div className="pb-4 pt-0.5 pl-0.5 text-left sm:text-center">
-        <h3 className="text-sm font-medium text-gray-900">
+        <h3 className="text-xs font-medium text-gray-900">
           <a href={product.href}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.nombre}
