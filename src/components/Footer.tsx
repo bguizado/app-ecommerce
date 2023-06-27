@@ -18,7 +18,7 @@ interface Props {
 
 const Footer: FC<Props> = ({ home, list, cart, login, facebook, instagram, youtube, twitter, alipay, paypal, stripe }) => {
     return (
-        <div className="bg-stone-100 w-full flex justify-center py-5 h-4/5">
+        <div className="bg-stone-100 w-full flex justify-center py-5 h-4/5 mt-auto">
             <ul className='w-4/5 flex justify-between'>
                 <li className='hidden md:block'>
                     <h5 className='text-slate-700 font-bold text-lg'>GARANTÍAS</h5>
