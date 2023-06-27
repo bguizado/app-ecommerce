@@ -48,7 +48,7 @@ export async function Products() {
   const products = await getProducts();
   return (
     <section className="bg-white">
-      <div className="mx-auto max-w-7xl overflow-hidden sm:px-6 lg:px-8">
+      <div>
         <h2 className="mt-10">Productos en oferta</h2>
         <Slider {...settings}>
         {/* <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4"> */}
