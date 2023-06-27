@@ -1,3 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slick-slide>div {
+    width: 390px;
+}
+
+@media (max-width: 600px) {
+  .slick-slide > div {
+    width: 160px;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .slick-slide > div {
+    width: 190px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slick-slider.slick-initialized {
+    margin-left: 10px;
+  }
+}

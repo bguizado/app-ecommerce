@@ -18,10 +18,10 @@ export async function Products() {
       slidesToScroll: 4,
       responsive: [
           {
-            breakpoint: 1024,
+            breakpoint: 1660,
             settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3,
+              slidesToShow: 4,
+              slidesToScroll: 4,
               infinite: true,
               dots: true
             }
@@ -30,16 +30,15 @@ export async function Products() {
           breakpoint: 600,
           settings: {
             arrows: false,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2,
+            slidesToShow: 3,
+            slidesToScroll: 3,
             }
           },
           {
             breakpoint: 480,
             settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1
+              slidesToShow: 2,
+              slidesToScroll: 2,
             }
           }
       ]
@@ -49,10 +48,9 @@ export async function Products() {
   return (
     <section className="bg-white">
       <div>
-        <h2 className="mt-10">Productos en oferta</h2>
+        <h2 className="mt-10 ml-2 font-normal text-lg text-[#99A4AC]">Productos en oferta</h2>
         <Slider {...settings}>
-        {/* <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4"> */}
-          {products
+        {products
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "oferta"
             )
@@ -61,10 +59,9 @@ export async function Products() {
                 <Cards product={product} />
               </div>
             ))}
-        {/* </div> */}
         </Slider>
-        {/* <h2 className="mt-10">Productos recomendados</h2>
-        <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+        <h2 className="mt-10 ml-2 font-normal text-lg text-[#99A4AC]">Productos recomendados</h2>
+        <Slider {...settings}>
           {products
             .filter(
               (product: IProducts) =>
@@ -75,9 +72,9 @@ export async function Products() {
                 <Cards product={product} />
               </div>
             ))}
-        </div>
-        <h2 className="mt-10">Productos destacados</h2>
-        <div className="-mx-px grid grid-cols-2 sm:mx-0 md:grid-cols-3 lg:grid-cols-4">
+        </Slider>
+        <h2 className="mt-10 ml-2 font-normal text-lg text-[#99A4AC]">Productos destacados</h2>
+        <Slider {...settings}>
           {products
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "destacado"
@@ -87,7 +84,7 @@ export async function Products() {
                 <Cards product={product} />
               </div>
             ))}
-        </div> */}
+        </Slider>
       </div>
     </section>
   );

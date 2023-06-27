@@ -21,8 +21,8 @@ export function Cards(props: any) {
           priority={true}
         />
       </div>
-      <div className="pb-4 pt-0.5 pl-0.5 text-left sm:text-center">
-        <h3 className="text-xs font-medium text-gray-900">
+      <div className="pb-4 pt-0.5 pl-0.5 text-center sm:text-center">
+        <h3 className="text-base font-light text-gray-900">
           <a href={product.href}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.nombre}
@@ -44,7 +44,7 @@ export function Cards(props: any) {
               />
             ))}
           </div>
-          <p className="mt-1 text-sm text-gray-500">{product.marca}</p>
+          <p className="mt-1 text-sm font-normal text-gray-500">{product.marca}</p>
         </div>
         <p className="mt-4 text-base font-medium text-gray-900">
           {"S/ "}
