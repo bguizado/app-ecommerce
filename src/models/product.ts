@@ -1,4 +1,4 @@
-export interface Products {
+export interface IProducts {
   id: string;
   nombre: string;
   marca: string;
@@ -9,4 +9,5 @@ export interface Products {
   imagen2: string;
   categoria: string;
   clase: string;
+  tipos: any;
 }
