@@ -16,7 +16,7 @@ const Footer: FC<Props> = ({facebook, instagram, youtube, twitter, alipay, paypa
     return (
         <>
             <div className="bg-slate-700 w-full flex flex-col md:justify-center py-5 h-4/5">
-                <ul className='flex flex-col md:m-auto md:flex-row md:justify-between'>
+                <ul className='flex flex-col md:m-auto md:flex-row md:justify-between md:flex-wrap'>
                     <li className='p-5'>
                         <h5 className='text-sky-600 font-bold text-lg'>GARANTÍAS</h5>
                         <p className='text-xs my-2 text-white '>Términos y Condiciones</p>
@@ -66,7 +66,7 @@ const Footer: FC<Props> = ({facebook, instagram, youtube, twitter, alipay, paypa
                 </ul>
             </div>
             <div>
-                <h5 className='h-14 p-4 text-sm text-white flex  items-center justify-center md:justify-end bg-slate-600'>Copyright © 2023 GameOn - Todos los derechos reservados</h5>
+                <h5 className='h-14 p-2 align-center text-sm text-white flex  items-center justify-center md:justify-end bg-slate-600'>Copyright © 2023 GameOn - Todos los derechos reservados</h5>
             </div>
         </>
 
