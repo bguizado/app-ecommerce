@@ -1,4 +1,4 @@
-const url = "https://run.mocky.io/v3/dd54af3f-561a-4940-a327-c32c06f1f066";
+const url = "https://run.mocky.io/v3/0a111700-e670-4dc6-988e-dff27d84cf5d";
 
 export async function getProducts() {
   const response = await fetch(url);

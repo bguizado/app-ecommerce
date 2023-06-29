@@ -13,13 +13,13 @@ export async function Products() {
     infinite: true,
     speed: 500,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 3,
     responsive: [
       {
         breakpoint: 1660,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToScroll: 3,
           infinite: true,
           arrows: true,
         },
