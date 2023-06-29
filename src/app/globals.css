@@ -9,7 +9,7 @@
 }
 
 .slick-slide>div {
-    width: 390px;
+    width: 360px;
 }
 
 @media (max-width: 600px) {
@@ -32,6 +32,6 @@
 
 @media (min-width: 1440px) {
   .slick-slider.slick-initialized {
-    margin-left: 50px;
+    margin-left: 16px;
   }
 }

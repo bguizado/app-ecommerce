@@ -10,25 +10,25 @@ export function Cards(props: any) {
   const product = props.product;
 
   return (
-    <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-6">
+    <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-4">
       <div>
         <Image
           src={product.imagen1}
           alt={`imagen de ${product.nombre}`}
-          className="h-[90%] w-[90%] object-fill object-center"
+          className="object-fill object-center"
           width={500}
           height={500}
           priority={true}
         />
       </div>
-      <div className="pb-4 pt-0.5 pl-0.5 text-center sm:text-center">
-        <h3 className="text-base font-light text-gray-900 h-auto sm:h-[46px]">
+      <div className="text-center sm:text-center">
+        <h3 className="text-gray-900 h-auto sm:h-[46px]">
           <a href={product.href}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.nombre}
           </a>
         </h3>
-        <div className="mt-3 flex flex-col items-center">
+        <div className="mt-1 flex flex-col items-center">
           <p className="sr-only">{product.valoracion}</p>
           <div className="flex items-center">
             {[0, 1, 2, 3, 4].map((valoracion) => (
@@ -46,7 +46,7 @@ export function Cards(props: any) {
           </div>
           <p className="mt-1 text-sm font-normal text-gray-500">{product.marca}</p>
         </div>
-        <p className="mt-4 text-base font-medium text-gray-900">
+        <p className="mt-4 font-medium text-gray-900">
           {"S/ "}
           {product.precio}
         </p>
