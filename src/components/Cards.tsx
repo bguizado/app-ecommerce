@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
+import Link from "next/link";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
@@ -10,9 +11,10 @@ export function Cards(props: any) {
   const product = props.product;
 
   return (
+    
     <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-4">
-      <div>
-        <Image
+       <div>
+       <Image
           src={product.imagen1}
           alt={`imagen de ${product.nombre}`}
           className="object-fill object-center"
@@ -23,10 +25,10 @@ export function Cards(props: any) {
       </div>
       <div className="text-center sm:text-center">
         <h3 className="text-gray-900 h-auto sm:h-[46px]">
-          <a href={product.href}>
+          <Link href={`products/${product.id}`}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.nombre}
-          </a>
+          </Link>
         </h3>
         <div className="mt-1 flex flex-col items-center">
           <p className="sr-only">{product.valoracion}</p>
