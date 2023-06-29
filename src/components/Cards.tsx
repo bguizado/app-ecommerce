@@ -22,7 +22,7 @@ export function Cards(props: any) {
         />
       </div>
       <div className="pb-4 pt-0.5 pl-0.5 text-center sm:text-center">
-        <h3 className="text-base font-light text-gray-900">
+        <h3 className="text-base font-light text-gray-900 h-auto sm:h-[46px]">
           <a href={product.href}>
             <span aria-hidden="true" className="absolute inset-0" />
             {product.nombre}
