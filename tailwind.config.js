@@ -21,6 +21,8 @@ module.exports = {
         'tablet':'767px',
         'tablet1004':'1004px',
         'laptop':'1024px',
+        'laptopL':'1440px',
+        'laptopL2':'1535px',
         'desktopmd': '1833px',
         'desktopmd2': '1965px',
         'desktop': '2000px',
