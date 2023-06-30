@@ -9,9 +9,8 @@ import "slick-carousel/slick/slick-theme.css";
 
 export async function Products() {
   const settings = {
-    arrows: true,
     infinite: true,
-    speed: 500,
+    speed: 300,
     slidesToShow: 5,
     slidesToScroll: 3,
     responsive: [
@@ -21,7 +20,7 @@ export async function Products() {
           slidesToShow: 4,
           slidesToScroll: 3,
           infinite: true,
-          arrows: true,
+          speed: 500,
         },
       },
       {
@@ -30,7 +29,7 @@ export async function Products() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          arrows: false,
+          speed: 500,
         },
       },
       {
@@ -39,7 +38,7 @@ export async function Products() {
           slidesToShow: 2,
           slidesToScroll: 2,
           infinite: true,
-          arrows: false,
+          speed: 500,
         },
       },
     ],
