@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Buscador = () => {
   return (
-    <div className="flex justify-center items-center absolute w-full top-20 lg:top-7 lg:right-28 lg:w-[65%] xl:top-7 xl:right-32 xl:w-[70%] 
+    <div className="flex justify-center items-center absolute w-full top-20 tablet:top-7 tablet:right-[105px] tablet:w-[60%] laptop:top-7 laptop:right-[115px] laptop:w-[68%] xl:top-7 xl:right-32 xl:w-[70%] 
     2xl:top-7 2xl:right-80 2xl:w-[62%] 2.7xl:top-7 2.7xl:right-94 2.7xl:w-[65%] 2.8xl:top-7 2.8xl:right-94 2.8xl:w-[66%]  3xl:top-7 3xl:right-94 3xl:w-[60%] desktopmd:top-7 desktopmd:right-70 
     desktopmd:w-[68%] desktopmd2:top-7 desktopmd2:right-70 desktopmd2:w-[70%] desktop:top-7 desktop:right-70 desktop:w-[70%]">
       <input
@@ -12,7 +12,7 @@ const Buscador = () => {
         placeholder="Ingrese su búsqueda "
       />
       <Image
-        className="absolute top-3 right-24 h-4 w-4 2xl:right-4"
+        className="absolute top-3 right-24 h-4 w-4 tablet:right-8 2xl:right-4"
         src="/buscador.png"
         alt="Icono de búsqueda"
         width={24}

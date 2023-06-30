@@ -11,12 +11,16 @@ const Home = () => {
   const [isMonitoresClicked, setIsMonitoresClicked] = useState(false);
   const [isPerifericosClicked, setIsPerifericosClicked] = useState(false);
   const [isTecladosClicked, setIsTecladosClicked] = useState(false);
+  const [isParlantesClicked, setIsParlantesClicked] = useState(false);
+  const [isLaptopsClicked, setIsLaptopsClicked] = useState(false);
 
   const handleClickTodos = () => {
     setIsTodosClicked(true);
     setIsMonitoresClicked(false);
     setIsPerifericosClicked(false);
     setIsTecladosClicked(false);
+    setIsParlantesClicked(false);
+    setIsLaptopsClicked(false);
   };
 
   const handleClickMonitores = () => {
@@ -24,6 +28,8 @@ const Home = () => {
     setIsMonitoresClicked(true);
     setIsPerifericosClicked(false);
     setIsTecladosClicked(false);
+    setIsParlantesClicked(false);
+    setIsLaptopsClicked(false);
   };
 
   const handleClickPerifericos = () => {
@@ -31,6 +37,8 @@ const Home = () => {
     setIsMonitoresClicked(false);
     setIsPerifericosClicked(true);
     setIsTecladosClicked(false);
+    setIsParlantesClicked(false);
+    setIsLaptopsClicked(false);
   };
 
   const handleClickTeclados = () => {
@@ -38,12 +46,31 @@ const Home = () => {
     setIsMonitoresClicked(false);
     setIsPerifericosClicked(false);
     setIsTecladosClicked(true);
+    setIsParlantesClicked(false);
+    setIsLaptopsClicked(false);
+  };
+  const handleClickParlantes = () => {
+    setIsTodosClicked(false);
+    setIsMonitoresClicked(false);
+    setIsPerifericosClicked(false);
+    setIsTecladosClicked(false);
+    setIsParlantesClicked(true);
+    setIsLaptopsClicked(false);
+  };
+  const handleClickLaptops = () => {
+    setIsTodosClicked(false);
+    setIsMonitoresClicked(false);
+    setIsPerifericosClicked(false);
+    setIsTecladosClicked(false);
+    setIsParlantesClicked(false);
+    setIsLaptopsClicked(true);
   };
   return (
     <>
     <Buscador/> 
-    <section className="flex w-full h-20 items-end lg:hidden">
-    <div className="flex w-full mb-2 overflow-x-auto ml-3">
+    <section className="flex w-full h-20 items-end lg:h-18 tablet:h-14 ">
+    <div className="flex w-full mb-3 overflow-x-auto ml-3 desktop-minimizar:mb-0 tablet-670:mb-2 desktop-minimizar:overflow-x-auto tablet:justify-center 
+    laptop:mb-3 laptop:justify-center" >
      <div className="flex space-x-3">
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
           onClick={handleClickTodos}/>
@@ -58,6 +85,16 @@ const Home = () => {
           text="Teclados"
           className={isTecladosClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
           onClick={handleClickTeclados}
+        />
+         <HeaderBotones
+          text="Parlantes"
+          className={isParlantesClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+          onClick={handleClickParlantes}
+        />
+         <HeaderBotones
+          text="Laptops"
+          className={isLaptopsClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+          onClick={handleClickLaptops}
         />
     </div>
     </div>
