@@ -119,8 +119,6 @@ const StripeIcon = () => {
   )
 }
 
-
-
 export const metadata = {
   title: 'Game On',
   description: 'E-Commerce Game On',
@@ -134,9 +132,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <>
+        <Header></Header>
           {children}
-        </>
         <Footer home={HomeIcon()} list={ListIcon()} cart={CartIcon()} login={LoginIcon()} facebook={FacebookIcon()} instagram={InstagramIcon()} youtube={YoutubeIcon()} twitter={TwitterIcon()} alipay={AlipayIcon()} paypal={PaypalIcon()} stripe={StripeIcon()} />
       </body>
     </html>
