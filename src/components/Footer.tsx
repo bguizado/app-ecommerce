@@ -1,4 +1,3 @@
-import { log } from 'console'
 import Link from 'next/link'
 import React, { FC, ReactElement } from 'react'
 
