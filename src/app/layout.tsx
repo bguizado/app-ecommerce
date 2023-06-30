@@ -89,10 +89,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <>
+        <Header></Header>
           {children}
-        </>
         <Footer facebook={FacebookIcon()} instagram={InstagramIcon()} youtube={YoutubeIcon()} twitter={TwitterIcon()} alipay={AlipayIcon()} paypal={PaypalIcon()} stripe={StripeIcon()} />
       </body>
     </html>
