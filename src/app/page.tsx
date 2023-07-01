@@ -68,11 +68,8 @@ const Home = () => {
   };
   return (
     <>
-    <Buscador/> 
-    <section className="flex w-full h-20 items-end lg:h-18 tablet:h-14 ">
-    <div className="flex w-full mb-3 overflow-x-auto ml-3 desktop-minimizar:mb-0 tablet-670:mb-2 desktop-minimizar:overflow-x-auto tablet:justify-center 
-    laptop:mb-3 laptop:justify-center" >
-     <div className="flex space-x-3">
+    <section className="flex w-full h-[62px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >
+     <div className="flex space-x-3 ml-2" >
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
           onClick={handleClickTodos}/>
         <HeaderBotones text="Monitores"  className={isMonitoresClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
@@ -97,11 +94,11 @@ const Home = () => {
           className={isLaptopsClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
           onClick={handleClickLaptops}
         />
-    </div>
+        
     </div>
     </section>
     <main>
-      <Products />
+    <Products></Products>
     </main>
     </>
 
