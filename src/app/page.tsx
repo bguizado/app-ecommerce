@@ -68,9 +68,8 @@ const Home = () => {
   };
   return (
     <>
-    <section className="flex w-full h-20 items-end ">
-    <div className="flex w-full mb-3 overflow-x-auto ml-3" >
-     <div className="flex space-x-3">
+    <section className="flex w-full h-[55px] overflow-x-auto justify-center items-center tablet:justify-center laptop:justify-center" >
+     <div className="flex space-x-3 ml-2" >
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
           onClick={handleClickTodos}/>
         <HeaderBotones text="Monitores"  className={isMonitoresClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
@@ -95,7 +94,7 @@ const Home = () => {
           className={isLaptopsClicked ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
           onClick={handleClickLaptops}
         />
-    </div>
+        
     </div>
     </section>
     <main>
