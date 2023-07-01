@@ -57,7 +57,7 @@ const Header = () => {
         </div>
         <div className="flex justify-center items-center w-full h-[30px] tablet:hidden laptop:hidden">
         <input
-          className="w-[94%] h-10 rounded-full pl-5 font-bold text-md placeholder-gray-300 shadow-md items-center mb-[22px] mobile2:w-[95%] mobile3:w-[96%] tablet:mb-0 "
+          className="w-[94%] h-10 rounded-full pl-5 font-bold text-md placeholder-gray-300 shadow-md items-center mb-[13px] mobile2:w-[95%] mobile3:w-[96%] tablet:mb-0 "
           type="text"
           placeholder="Ingrese su búsqueda "
         />

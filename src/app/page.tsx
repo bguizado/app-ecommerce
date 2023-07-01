@@ -68,7 +68,7 @@ const Home = () => {
   };
   return (
     <>
-    <section className="flex w-full h-[55px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >
+    <section className="flex w-full h-[62px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >
      <div className="flex space-x-3 ml-2" >
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
           onClick={handleClickTodos}/>
@@ -98,7 +98,7 @@ const Home = () => {
     </div>
     </section>
     <main>
-
+    <Products></Products>
     </main>
     </>
 
