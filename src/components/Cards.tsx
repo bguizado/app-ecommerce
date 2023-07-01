@@ -33,11 +33,11 @@ export function Cards(props: any) {
         <div className="mt-1 flex flex-col items-center">
           <p className="sr-only">{product.valoracion}</p>
           <div className="flex items-center">
-            {[0, 1, 2, 3, 4].map((valoracion) => (
+            {[0, 1, 2, 3, 4].map((element) => (
               <StarIcon
-                key={valoracion}
+                key={element}
                 className={classNames(
-                  product.valoracion > valoracion
+                  product.valoracion > element
                     ? "text-yellow-400"
                     : "text-gray-200",
                   "h-5 w-5 flex-shrink-0"
@@ -56,5 +56,3 @@ export function Cards(props: any) {
     </div>
   );
 }
-
-export default Cards;
