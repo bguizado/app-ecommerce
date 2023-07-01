@@ -86,7 +86,7 @@ export async function Products() {
               (product: IProducts) => product.tipos.at(0).clase === "destacado"
             )
             .map((product: IProducts) => (
-              <div className="mb-40 " key={product.id}>
+              <div className="mb-20 " key={product.id}>
                 <Cards product={product} />
               </div>
             ))}
