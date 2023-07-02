@@ -11,3 +11,6 @@ export interface IProducts {
   clase: string;
   tipos: any;
 }
+
+//array con tipos de imagenes
+//enum para no tener problemas con miniscula con mayuscula
