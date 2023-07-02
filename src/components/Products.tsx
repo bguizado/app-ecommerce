@@ -13,6 +13,7 @@ export async function Products() {
     speed: 300,
     slidesToShow: 5,
     slidesToScroll: 3,
+    arrows: false,
     responsive: [
       {
         breakpoint: 1660,
@@ -21,6 +22,7 @@ export async function Products() {
           slidesToScroll: 3,
           infinite: true,
           speed: 500,
+          arrows: false,
         },
       },
       {
@@ -30,6 +32,7 @@ export async function Products() {
           slidesToScroll: 3,
           infinite: true,
           speed: 500,
+          arrows: false,
         },
       },
       {
@@ -39,6 +42,7 @@ export async function Products() {
           slidesToScroll: 2,
           infinite: true,
           speed: 500,
+          arrows: false,
         },
       },
     ],
