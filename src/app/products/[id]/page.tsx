@@ -1,9 +1,9 @@
-import React from 'react'
+import { IProducts } from "@/models/product";
 
-const producto = () => {
+export default function product ( {params}:{params:IProducts} ) {
   return (
-    <div>producto</div>
+    <div>
+      <p>Modelo de producto: {params.id} </p>
+    </div>
   )
 }
-
-export default producto
