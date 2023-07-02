@@ -4,8 +4,20 @@ import Cards from "@/components/Cards";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from 'react';
 
-export default async function Products() {
+export const Products = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const fetchedProducts = await getProducts();
+      setProducts(fetchedProducts);
+    };
+
+    fetchProducts();
+  }, []);
+
   const settings = {
     infinite: true,
     speed: 300,
@@ -48,7 +60,7 @@ export default async function Products() {
 
   //utilizar enmuns en lugar de comparcion de strings
   // const OFERTA = "oferta "
-  const products = await getProducts();
+
   return (
     <section className="bg-white">
       <div>

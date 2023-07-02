@@ -1,11 +1,13 @@
 'use client'
 
-import React,{ useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
 import Buscador from '@/components/Buscador'
-import Products from "@/components/Products";
+import { getProducts } from '../api/api';
+import { IProducts } from '@/models/product';
+import {Products} from "@/components/Products";
 
 const Home = () => {
   const [isTodosClicked, setIsTodosClicked] = useState(true);
@@ -66,6 +68,7 @@ const Home = () => {
     setIsParlantesClicked(false);
     setIsLaptopsClicked(true);
   };
+
   return (
     <>
     <section className="flex w-full h-[62px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >

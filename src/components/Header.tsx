@@ -9,7 +9,7 @@ const Header = () => {
       <div>
         <div className="bg-slate-700 h-24 w-full flex items-center">
           <div className="h-24 w-full flex  items-center tablet:w-[53%] laptop:w-[34%] laptopL:w-[22%] laptopL2:w-[18%] ">
-            <Link href={"./"} legacyBehavior>
+            <Link href={"/"} legacyBehavior>
               <a>
                 <Image
                   className="h-full w-[200px] ml-2.5 mb-1 mobile2:h-full mobile2:w-[210px]  mobile2:mb-1 mobile2:ml-2 mobile3:w-[215px]"
