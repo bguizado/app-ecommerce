@@ -3,9 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { IProducts } from "@/models/product";
 
-export function Cards(props: { item: IProducts }) {
-  const { item } = props;
-
+export function Cards({ item }: { item: IProducts }) {
   return (
     <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-4">
       <div>
@@ -30,7 +28,7 @@ export function Cards(props: { item: IProducts }) {
           <div className="flex items-center">
             {[0, 1, 2, 3, 4].map((element: number) => (
               <StarIcon
-                key={item.id}
+                key={element}
                 className={` ${
                   item.valoracion > element
                     ? "text-yellow-400"
