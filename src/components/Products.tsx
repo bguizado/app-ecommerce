@@ -62,7 +62,7 @@ export async function Products() {
             )
             .map((product: IProducts) => (
               <div key={product.id}>
-                <Cards product={product} />
+                <Cards item={product} />
               </div>
             ))}
         </Slider>
@@ -77,7 +77,7 @@ export async function Products() {
             )
             .map((product: IProducts) => (
               <div key={product.id}>
-                <Cards product={product} />
+                <Cards item={product} />
               </div>
             ))}
         </Slider>
@@ -91,7 +91,7 @@ export async function Products() {
             )
             .map((product: IProducts) => (
               <div className="mb-20 " key={product.id}>
-                <Cards product={product} />
+                <Cards item={product} />
               </div>
             ))}
         </Slider>

@@ -1,7 +1,7 @@
 const url = "https://run.mocky.io/v3/0a111700-e670-4dc6-988e-dff27d84cf5d";
 
 export async function getProducts() {
-  const response = await fetch(url);
+  const response = await fetch(url , { cache: 'no-store' });
   const products = await response.json();
 
   return products;

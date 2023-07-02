@@ -1,22 +1,21 @@
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
+import { IProducts } from "@/models/product";
 
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(" ");
 }
 
-export function Cards(props: any) {
-
-  const product = props.product;
+export function Cards(props: { item: IProducts }) {
+  const { item } = props;
 
   return (
-    
     <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-4">
-       <div>
-       <Image
-          src={product.imagen1}
-          alt={`imagen de ${product.nombre}`}
+      <div>
+        <Image
+          src={item.imagen1}
+          alt={`imagen de ${item.nombre}`}
           className="object-fill object-center"
           width={500}
           height={500}
@@ -25,19 +24,19 @@ export function Cards(props: any) {
       </div>
       <div className="text-center sm:text-center">
         <h3 className="text-gray-900 h-auto sm:h-[46px]">
-          <Link href={`products/${product.id}`}>
+          <Link href={`products/${item.id}`}>
             <span aria-hidden="true" className="absolute inset-0" />
-            {product.nombre}
+            {item.nombre}
           </Link>
         </h3>
         <div className="mt-1 flex flex-col items-center">
-          <p className="sr-only">{product.valoracion}</p>
+          <p className="sr-only">{item.valoracion}</p>
           <div className="flex items-center">
             {[0, 1, 2, 3, 4].map((element) => (
               <StarIcon
                 key={element}
                 className={classNames(
-                  product.valoracion > element
+                  item.valoracion > element
                     ? "text-yellow-400"
                     : "text-gray-200",
                   "h-5 w-5 flex-shrink-0"
@@ -46,11 +45,11 @@ export function Cards(props: any) {
               />
             ))}
           </div>
-          <p className="mt-1 text-sm font-normal text-gray-500">{product.marca}</p>
+          <p className="mt-1 text-sm font-normal text-gray-500">{item.marca}</p>
         </div>
         <p className="mt-4 font-medium text-gray-900">
           {"S/ "}
-          {product.precio}
+          {item.precio}
         </p>
       </div>
     </div>
