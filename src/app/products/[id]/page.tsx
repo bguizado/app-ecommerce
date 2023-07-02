@@ -1,8 +1,9 @@
-import { useRouter } from 'next/router';
+import React from 'react'
 
-export default function productos({ params }: { params: { id: string } }) {
-  const { id } = params;
+const producto = () => {
   return (
-    <div>Aquí aparecen los productos</div>
-  );
+    <div>producto</div>
+  )
 }
+
+export default producto
