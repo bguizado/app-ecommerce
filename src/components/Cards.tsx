@@ -3,10 +3,6 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { IProducts } from "@/models/product";
 
-function classNames(...classes: string[]) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export function Cards(props: { item: IProducts }) {
   const { item } = props;
 
@@ -22,7 +18,7 @@ export function Cards(props: { item: IProducts }) {
           priority={true}
         />
       </div>
-      <div className="text-center sm:text-center">
+      <div className="text-center">
         <h3 className="text-gray-900 h-auto sm:h-[46px]">
           <Link href={`products/${item.id}`}>
             <span aria-hidden="true" className="absolute inset-0" />
@@ -30,17 +26,17 @@ export function Cards(props: { item: IProducts }) {
           </Link>
         </h3>
         <div className="mt-1 flex flex-col items-center">
-          <p className="sr-only">{item.valoracion}</p>
+          <p className="sr-only">{`valoracion ${item.valoracion} estrellas`}</p>
           <div className="flex items-center">
-            {[0, 1, 2, 3, 4].map((element) => (
+            {[0, 1, 2, 3, 4].map((element: number) => (
               <StarIcon
-                key={element}
-                className={classNames(
+                key={item.id}
+                className={` ${
                   item.valoracion > element
                     ? "text-yellow-400"
-                    : "text-gray-200",
-                  "h-5 w-5 flex-shrink-0"
-                )}
+                    : "text-gray-200"
+                } h-5 w-5 flex-shrink-0
+                  `}
                 aria-hidden="true"
               />
             ))}
