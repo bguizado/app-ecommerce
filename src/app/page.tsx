@@ -5,6 +5,7 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
 import Buscador from '@/components/Buscador'
+import Products from "@/components/Products";
 
 const Home = () => {
   const [isTodosClicked, setIsTodosClicked] = useState(true);
@@ -67,7 +68,7 @@ const Home = () => {
   };
   return (
     <>
-    <section className="flex w-full h-[55px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >
+    <section className="flex w-full h-[62px] overflow-x-auto  items-center tablet:justify-center laptop:justify-center" >
      <div className="flex space-x-3 ml-2" >
         <HeaderBotones text="Todos" className={isTodosClicked ? 'bg-orange-300 text-white w-20' : 'bg-gray-300 text-gray-500 w-20'}
           onClick={handleClickTodos}/>
@@ -96,10 +97,11 @@ const Home = () => {
         
     </div>
     </section>
-    <div className='pl-5 pr-5 pb-5'>
-      <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur rerum, est laudantium quod in placeat ratione porro vitae! Illum veritatis asperiores expedita repellendus soluta cupiditate ullam commodi totam quia amet.</p>
-    </div>
+    <main>
+    <Products></Products>
+    </main>
     </>
+
   )
 }
 
