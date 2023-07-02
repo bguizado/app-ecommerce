@@ -68,6 +68,7 @@ const Home = () => {
     setIsParlantesClicked(false);
     setIsLaptopsClicked(true);
   };
+  
 
   return (
     <>
@@ -101,7 +102,7 @@ const Home = () => {
     </div>
     </section>
     <main>
-    <Products></Products>
+    <Products />
     </main>
     </>
 
