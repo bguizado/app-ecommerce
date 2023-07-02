@@ -52,7 +52,7 @@ export default async function Products() {
   return (
     <section className="bg-white">
       <div>
-        <h2 className="mt-10 ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
+        <h2 className="ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
           Productos en oferta
         </h2>
         <Slider {...settings}>
