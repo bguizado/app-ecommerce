@@ -46,6 +46,8 @@ export default async function Products() {
     ],
   };
 
+  //utilizar enmuns en lugar de comparcion de strings
+  // const OFERTA = "oferta "
   const products = await getProducts();
   return (
     <section className="bg-white">
