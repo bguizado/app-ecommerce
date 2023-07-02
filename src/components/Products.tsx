@@ -2,7 +2,7 @@
 
 import { getProducts } from "../api/api";
 import { IProducts } from "@/models/product";
-import { Cards } from "@/components/Cards";
+import Cards from "@/components/Cards";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

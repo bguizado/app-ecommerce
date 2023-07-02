@@ -3,7 +3,7 @@ import { StarIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import { IProducts } from "@/models/product";
 
-export function Cards({ item }: { item: IProducts }) {
+const Cards: React.FC<{ item: IProducts }> = ({ item }) => {
   return (
     <div className="group relative border border-gray-200 shadow-lg rounded-xl p-0.5 sm:p-4">
       <div>
@@ -48,4 +48,6 @@ export function Cards({ item }: { item: IProducts }) {
       </div>
     </div>
   );
-}
+};
+
+export default Cards;
