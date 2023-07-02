@@ -1,5 +1,3 @@
-"use client";
-
 import { getProducts } from "../api/api";
 import { IProducts } from "@/models/product";
 import Cards from "@/components/Cards";
@@ -7,7 +5,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-export async function Products() {
+export default async function Products() {
   const settings = {
     infinite: true,
     speed: 300,
@@ -60,8 +58,8 @@ export async function Products() {
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "oferta"
             )
-            .map((product: IProducts, i: number) => (
-              <div key={i}>
+            .map((product: IProducts) => (
+              <div key={product.id}>
                 <Cards item={product} />
               </div>
             ))}
@@ -75,8 +73,8 @@ export async function Products() {
               (product: IProducts) =>
                 product.tipos.at(0).clase === "recomendado"
             )
-            .map((product: IProducts, i: number) => (
-              <div key={i}>
+            .map((product: IProducts) => (
+              <div key={product.id}>
                 <Cards item={product} />
               </div>
             ))}
@@ -89,8 +87,8 @@ export async function Products() {
             .filter(
               (product: IProducts) => product.tipos.at(0).clase === "destacado"
             )
-            .map((product: IProducts, i: number) => (
-              <div className="mb-20 " key={i}>
+            .map((product: IProducts) => (
+              <div className="mb-20 " key={product.id}>
                 <Cards item={product} />
               </div>
             ))}
@@ -99,5 +97,3 @@ export async function Products() {
     </section>
   );
 }
-
-export default Products;
