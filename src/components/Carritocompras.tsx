@@ -1,24 +1,23 @@
 "use client"
 import { useState, useEffect } from "react"
 
-
 function Carritocompras() {
   
-
-  
   const [numpro , setnumpro] = useState(1)
+
+  function Restar () { if(numpro>1) return setnumpro(numpro-1)}
   return (
 
-    <div className="flex flex-shrink-0  border-b-2 border-b-gray-300 justify-around items-center "> 
+    <div className=" flex flex-shrink-0  border-b-2 border-b-gray-300 justify-around items-center box-content max-w-full"> 
      <img src="https://i.ibb.co/1dhTSKZ/167520951358224.jpg"
-       alt="" className="w-28 h-24 items-center"/>
+       alt="" className="w-28 h-24 items-center  inline-block"/>
       <div className="">
         <h2 className="text-lg tex-neutral-500 justify-center w-35 text-[#99A4AC] flex-nowrap font-bold">Monitor Benq EL2870U</h2>
         <p className="tex-sm w-30 h-8"> S./ 2000.30</p>
       </div>
       
       <div className="flex-col items-baseline">
-        <button className="text-2xl w-3.5 h-9 b-2 text-center font-normal " onClick={() => { setnumpro (numpro +1)}} >
+        <button className="text-2xl w-3.5 h-9 b-2 text-center font-normal " onClick={()=> { setnumpro (numpro +1)}} >
         +
         </button> 
         <div className="flex">
@@ -31,7 +30,7 @@ function Carritocompras() {
 </svg>
 </button>
         </div> 
-        <button className="text-2xl w-3 h-9 text-center font-normal" onClick={() => setnumpro( numpro -1 )}>
+        <button className="text-2xl w-3 h-9 text-center font-normal" onClick={Restar}>
           -
         </button>
       </div>
