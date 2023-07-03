@@ -5,9 +5,13 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from 'react';
+import { Anybody } from "next/font/google";
 
+type ProductsProps = {
+  filterCategory: string;
+};
 
-export const Products = () => {
+export const Products = ({ filterCategory }: ProductsProps) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -71,7 +75,7 @@ export const Products = () => {
         <Slider {...settings}>
           {products
             .filter(
-              (product: IProducts) => product.tipos.at(0).clase === "oferta"
+              (product: IProducts) => (product.tipos.at(0).clase === "oferta" && product.tipos.at(0).categoria === filterCategory )
             )
             .map((product: IProducts) => (
               <div key={product.id}>
@@ -86,7 +90,7 @@ export const Products = () => {
           {products
             .filter(
               (product: IProducts) =>
-                product.tipos.at(0).clase === "recomendado"
+                (product.tipos.at(0).clase === "recomendado" && product.tipos.at(0).categoria === filterCategory )
             )
             .map((product: IProducts) => (
               <div key={product.id}>
@@ -100,7 +104,7 @@ export const Products = () => {
         <Slider {...settings}>
           {products
             .filter(
-              (product: IProducts) => product.tipos.at(0).clase === "destacado"
+              (product: IProducts) => (product.tipos.at(0).clase === "destacado" && product.tipos.at(0).categoria === filterCategory)
             )
             .map((product: IProducts) => (
               <div className="mb-20 " key={product.id}>
