@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Buscador from "./Buscador";
+import UsuarioMiniMenu from "./UsuarioMiniMenu";
 
 const Header = () => {
   return (
@@ -33,17 +35,7 @@ const Header = () => {
             className="w-40 h-24 flex justify-evenly space-x-1.5 mr-5 items-center mobile3:space-x-2 tablet:w-[18%] laptop:w-[12%] laptopL:w-[8%]
         laptopL2:w-[24%]"
           >
-            <Link href={"/login"}>
-              <div className="laptopL2:flex laptopL2:items-center laptopL2:space-x-1 mt-2">
-                <Image
-                  className="h-[35px] w-[35px] cursor-pointer mt-0.5  mobile2:h-[36px] mobile2:w-[36px] mobile3:h-[36px] mobile3:w-[36px]"
-                  src="/User.png"
-                  width={500}
-                  height={500}
-                  alt="Usuario"
-                />
-              </div>
-            </Link>
+            <UsuarioMiniMenu/>
             <div className="laptopL2:flex laptopL2:items-center laptopL2:space-x-1.5 ">
               <Image
                 className="h-[27px] w-[27px] mt-2.5 cursor-pointer mobile2:h-[28px] mobile2:w-[28px] mobile3:h-[28px] mobile3:w-[28px]"
@@ -73,5 +65,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;

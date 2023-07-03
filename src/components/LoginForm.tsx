@@ -18,7 +18,8 @@ const LoginForm = () => {
         const usuarioLogeado = JSON.parse(localStorage.getItem('usuario')!);
 
         if(inputUsuario.email === usuarioLogeado.email &&
-            inputUsuario.password === inputUsuario.password){
+            inputUsuario.password === usuarioLogeado.password){
+                localStorage.setItem("logeado", "true");
                 router.push('/')
             }
             else{
