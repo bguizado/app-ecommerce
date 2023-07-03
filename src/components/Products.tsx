@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from 'react';
-import { Anybody } from "next/font/google";
 
 type ProductsProps = {
   filterCategory: string;
@@ -63,9 +62,6 @@ export const Products = ({ filterCategory }: ProductsProps) => {
     ],
   };
 
-  //utilizar enmuns en lugar de comparcion de strings
-  // const OFERTA = "oferta "
-
   return (
     <section className="bg-white">
       <div>
@@ -74,24 +70,48 @@ export const Products = ({ filterCategory }: ProductsProps) => {
         </h2>
         <Slider {...settings}>
           {products
-            .filter(
-              (product: IProducts) => (product.tipos.at(0).clase === "oferta" && product.tipos.at(0).categoria === filterCategory )
-            )
-            .map((product: IProducts) => (
-              <div key={product.id}>
-                <Cards item={product} />
-              </div>
-            ))}
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "oferta";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "oferta" && product.tipos[0].categoria === filterCategory
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "oferta" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
+            .map((product: IProducts) => {
+              console.log('Periféricos key:', product.id); 
+              return (
+                <div key={product.id}>
+                  <Cards item={product} />
+                </div>
+              );
+            })}
         </Slider>
         <h2 className="mt-10 ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
           Productos recomendados
         </h2>
         <Slider {...settings}>
           {products
-            .filter(
-              (product: IProducts) =>
-                (product.tipos.at(0).clase === "recomendado" && product.tipos.at(0).categoria === filterCategory )
-            )
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "recomendado";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "recomendado" && product.tipos[0].categoria === filterCategory
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "recomendado" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
             .map((product: IProducts) => (
               <div key={product.id}>
                 <Cards item={product} />
@@ -103,11 +123,22 @@ export const Products = ({ filterCategory }: ProductsProps) => {
         </h2>
         <Slider {...settings}>
           {products
-            .filter(
-              (product: IProducts) => (product.tipos.at(0).clase === "destacado" && product.tipos.at(0).categoria === filterCategory)
-            )
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "destacado";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "destacado" && product.tipos[0].categoria === filterCategory
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "destacado" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
             .map((product: IProducts) => (
-              <div className="mb-20 " key={product.id}>
+              <div className="mb-20" key={product.id}>
                 <Cards item={product} />
               </div>
             ))}

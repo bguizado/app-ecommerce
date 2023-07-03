@@ -28,12 +28,12 @@ const Home = () => {
           <HeaderBotones
             text="Monitores"
             className={filterCategory === 'Monitores' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
-            onClick={() => handleClickCategory('Monitores')}
+            onClick={() => handleClickCategory("Monitores")}
           />
           <HeaderBotones
             text="Perifericos"
             className={filterCategory === 'Perifericos' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
-            onClick={() => handleClickCategory('Perifericos')}
+            onClick={() => handleClickCategory("Perifericos")}
           />
         </div>
       </section>

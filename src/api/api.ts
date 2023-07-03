@@ -1,11 +1,12 @@
-const url = "https://run.mocky.io/v3/a1aa2d7c-0d69-41c5-a58b-53854ffd360c";
+const url = "https://run.mocky.io/v3/05e8172e-684f-494b-98f5-906e6564e8e0";
 
 export async function getProducts() {
   const response = await fetch(url, { cache: 'no-store' });
   const products = await response.json();
 
-  return products;
+  return products;  
 }
+
 
 // export async function ListOfProducts() {
 //   const products = await api();
