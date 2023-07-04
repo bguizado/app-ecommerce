@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
-import Buscador from '@/components/Buscador'
 import { getProducts } from '../api/api';
 import { IProducts } from '@/models/product';
 import {Products} from "@/components/Products";

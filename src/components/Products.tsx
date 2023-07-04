@@ -75,7 +75,7 @@ export const Products = ({ filterCategory }: ProductsProps) => {
                 return product.tipos[0].clase === "oferta";
               } else if (filterCategory === 'Todos') {
                 return (
-                  product.tipos[0].clase === "oferta" && product.tipos[0].categoria === filterCategory
+                  product.tipos[0].clase === "oferta" 
                 );
               } else {
                 return (
@@ -103,7 +103,7 @@ export const Products = ({ filterCategory }: ProductsProps) => {
                 return product.tipos[0].clase === "recomendado";
               } else if (filterCategory === 'Todos') {
                 return (
-                  product.tipos[0].clase === "recomendado" && product.tipos[0].categoria === filterCategory
+                  product.tipos[0].clase === "recomendado" 
                 );
               } else {
                 return (
@@ -128,7 +128,7 @@ export const Products = ({ filterCategory }: ProductsProps) => {
                 return product.tipos[0].clase === "destacado";
               } else if (filterCategory === 'Todos') {
                 return (
-                  product.tipos[0].clase === "destacado" && product.tipos[0].categoria === filterCategory
+                  product.tipos[0].clase === "destacado" 
                 );
               } else {
                 return (

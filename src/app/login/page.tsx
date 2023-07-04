@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 
 export default function Login() {
+    
   return (
     <div className="min-h-full flex items-center justify-center mt-30 py-12 sm:px-6 lg:px-8 text-gray-500">
         <div>
