@@ -30,7 +30,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
   return (
     < >
       {product ? (
-        <div className="h-[480px]">
+        <div className="h-fit">
           <Image
             src={product.imagen1}
             alt={`imagen de ${product.nombre}`}
@@ -60,8 +60,8 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
           <p className="pl-4">{product.descripcion}</p>
           </div>
           </div>
-          <div className="flex justify-center items-center"> 
-            <button className="bg-orange-300 rounded-full h-[40px] mt-2">
+          <div className="flex justify-center items-center h-[80px]"> 
+            <button className="bg-orange-300 rounded-full h-[40px]">
              <p className="text-white font-bold pl-4 pr-4"> Agregar al Carrito</p> 
             </button> 
           </div>
