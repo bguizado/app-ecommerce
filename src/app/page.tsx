@@ -1,10 +1,8 @@
 'use client'
-
 import React, { useState, useEffect } from 'react';
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
-import { getProducts } from '../api/api';
 import { IProducts } from '@/models/product';
 import {Products} from "@/components/Products";
 
@@ -37,7 +35,7 @@ const Home = () => {
         </div>
       </section>
       <main>
-        <Products filterCategory={filterCategory} />
+        <Products filterCategory={filterCategory}/>
       </main>
     </>
   );

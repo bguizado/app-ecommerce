@@ -1,26 +1,35 @@
-import { getProducts } from "../api/api";
+
 import { IProducts } from "@/models/product";
 import Cards from "@/components/Cards";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from 'react';
+import Link from "next/link";
 
 type ProductsProps = {
   filterCategory: string;
 };
 
 export const Products = ({ filterCategory }: ProductsProps) => {
-  const [products, setProducts] = useState([]);
+  
+  const [products, setProducts] = useState<any[]>([]); 
 
   useEffect(() => {
-    const fetchProducts = async () => {
-      const fetchedProducts = await getProducts();
-      setProducts(fetchedProducts);
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://run.mocky.io/v3/05e8172e-684f-494b-98f5-906e6564e8e0");
+        const data = await response.json();
+        setProducts(data);
+        console.log('Respuesta del API:', data);
+      } catch (error) {
+        console.error('Error al obtener los datos del API:', error);
+      }
     };
 
-    fetchProducts();
+    fetchData();
   }, []);
+
 
   const settings = {
     infinite: true,
@@ -85,7 +94,6 @@ export const Products = ({ filterCategory }: ProductsProps) => {
               }
             })
             .map((product: IProducts) => {
-              console.log('Periféricos key:', product.id); 
               return (
                 <div key={product.id}>
                   <Cards item={product} />
@@ -114,7 +122,7 @@ export const Products = ({ filterCategory }: ProductsProps) => {
             })
             .map((product: IProducts) => (
               <div key={product.id}>
-                <Cards item={product} />
+                      <Cards item={product} />
               </div>
             ))}
         </Slider>
