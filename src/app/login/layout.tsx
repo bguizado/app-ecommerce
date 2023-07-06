@@ -81,7 +81,7 @@ export const metadata = {
   description: "E-Commerce Game On",
 };
 
-export default function RootLayout({
+export default function Layout({
   children,
 }: {
   children: React.ReactNode;
