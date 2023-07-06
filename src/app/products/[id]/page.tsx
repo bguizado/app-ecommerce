@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { IProducts } from "@/models/product";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
+import Modal from "@/components/Modal";
 
 const DetailProduct = ({ params }: { params: IProducts }) => {
   const [product, setProduct] = useState<IProducts | null>(null);
@@ -60,11 +61,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
           <p className="pl-4">{product.descripcion}</p>
           </div>
           </div>
-          <div className="flex justify-center items-center"> 
-            <button className="bg-orange-300 rounded-full h-[40px] mt-2">
-             <p className="text-white font-bold pl-4 pr-4"> Agregar al Carrito</p> 
-            </button> 
-          </div>
+          <Modal ></Modal>
         </div>
 
       ) : (
