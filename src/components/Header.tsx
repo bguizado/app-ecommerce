@@ -42,13 +42,17 @@ const Header = () => {
                   alt="Usuario"
                 />
             </Link>
-              <Image
+            <Link href={"/Cart"}> 
+            <Image
                 className="h-[27px] w-[27px] mt-2.5 cursor-pointer mobile2:h-[28px] mobile2:w-[28px] mobile3:h-[28px] mobile3:w-[28px] laptopL2:h-[35px] laptopL2:w-[35px]"
                 src="/CarritoDeCompras.png"
                 width={1000}
                 height={1000}
                 alt="Carrito de Compras"
               />
+            
+            </Link>
+             
  
           </div>
           
