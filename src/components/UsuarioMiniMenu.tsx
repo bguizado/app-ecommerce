@@ -20,7 +20,7 @@ const UsuarioMiniMenu = () => {
           if(logeado){
              setEstado(JSON.parse(localStorage.getItem('logeado')))
           }    
-        //window.addEventListener('storage', () => setEstado(localStorage.getItem('logeado')));
+        window.addEventListener('storage', () => setEstado(localStorage.getItem('logeado')));
     }, [localStorage.getItem('logeado')]);
 
     useEffect(() => {
@@ -69,6 +69,7 @@ const UsuarioMiniMenu = () => {
                 alt="Usuario"
             />
             {expandir &&  (estado ===true) &&(
+                <>
                     <div className="menu-expandir bg-slate-700 absolute top-14 right-0">
                     <ul>
                         <li className="p-2 text-sm text-gray-300">Bienvenidos, {usuarioLogeado.name}</li>
@@ -76,8 +77,10 @@ const UsuarioMiniMenu = () => {
                                               
                     </ul>
                     </div>
+                    </>
                 )
             }{expandir &&  (estado ===false||null) &&(
+                <>
                 <div className="menu-expandir bg-slate-700 absolute top-14 right-0">
                 <ul>
                     <li className="p-2 text-sm text-gray-300">Bienvenidos!</li>
@@ -85,6 +88,7 @@ const UsuarioMiniMenu = () => {
                     <li className="p-2 text-sm text-gray-300 hover:bg-slate-800" onClick={register}>Registrate</li>                        
                 </ul>
                 </div>
+                </>
             )
         }
         </div>
