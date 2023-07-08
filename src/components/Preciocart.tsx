@@ -1,4 +1,6 @@
 import Carritocompras from "./Carritocompras"
+import Link from "next/link"
+
 let Pdelivery = " s./ 00.00"
 let pproductos = "S./ 3,000.00"
 function Preciocart() {
@@ -22,9 +24,11 @@ function Preciocart() {
             <p className="px-4"> {pproductos}</p>
         </div>
             <div className="flex justify-center p-10 bg-[#F8F8F9]"> 
+            <Link href={"/checkout"}>
                 <button className="text-[white] rounded-3xl bg-[#F39C34] w-64 h-12 ">
                     <h3 className="text-lg "> Pagar </h3>
                 </button>
+            </Link>    
             </div>
 
     </div>

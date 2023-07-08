@@ -1,7 +1,9 @@
+"use client"
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-
+import Buscador from "./Buscador";
+import UsuarioMiniMenu from "./UsuarioMiniMenu";
 
 const Header = () => {
   return (
@@ -76,5 +78,4 @@ const Header = () => {
     </>
   );
 };
-
 export default Header;
