@@ -2,13 +2,13 @@
 import { CarritoReducer, carritoInitialState } from "@/app/Reducers/CarritoReducers";
 import { useState, useEffect } from "react";
 import {useReducer} from "react";
-export const addToCard = () => { console.log ()}
-export const delToCard = () => {}
+/*export const addToCard = () => { console.log ()}
+export const delToCard = () => {}*/
 
 function Carritocompras() {
- const [state, dispatch] = useReducer(CarritoReducer,carritoInitialState);  
- const {products , cart} = state ;
-  const [numpro , setnumpro] = useState(1);
+ /*const [state, dispatch] = useReducer(CarritoReducer,carritoInitialState);  
+ const {products , cart} = state ;*/
+  
   /*const addToCard = () => {}
   const delToCard = () => {}  (NO SE SI VAYA AQUI O ARRIBA)*/
 
@@ -30,7 +30,7 @@ function Carritocompras() {
 
   console.log(productList); // Muestra los productos en la consola */
 
-
+  const [numpro , setnumpro] = useState(1);
   function Restar () { if(numpro>1) return setnumpro(numpro-1)}
   return (
 
