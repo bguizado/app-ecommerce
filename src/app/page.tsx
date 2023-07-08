@@ -98,7 +98,7 @@ const Home = () => {
     </div>
     </section>
     <main>
-    <Products></Products>
+
     </main>
     </>
 
