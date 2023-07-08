@@ -14,7 +14,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://run.mocky.io/v3/05e8172e-684f-494b-98f5-906e6564e8e0"
+          "https://run.mocky.io/v3/b3107a66-eb8c-492f-8a7b-e0d3ab628c78"
         );
         const data = await response.json();
         const foundProduct = data.find(
@@ -34,6 +34,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
     <>
       {product ? (
         <div className="h-fit">
+          <div className="flex justify-center">
           <Image
             src={product.imagen1}
             alt={`imagen de ${product.nombre}`}
@@ -42,6 +43,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
             height={500}
             priority={true}
           />
+          </div>
           <div className="flex justify-center h-fit">
             <div className="bg-gray-100 shadow-lg rounded-lg w-[90%]">
               <div className="flex items-center justify-start pl-4 pb-3 mt-3">

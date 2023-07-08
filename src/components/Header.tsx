@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Buscador from "./Buscador";
 import UsuarioMiniMenu from "./UsuarioMiniMenu";
 
 const Header = () => {
@@ -46,7 +45,6 @@ const Header = () => {
                 height={1000}
                 alt="Carrito de Compras"
               />
-            
             </Link>
  
           </div>
