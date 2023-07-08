@@ -1,9 +1,35 @@
 "use client"
-import { useState, useEffect } from "react"
+import { CarritoReducer, carritoInitialState } from "@/app/Reducers/CarritoReducers";
+import { useState, useEffect } from "react";
+import {useReducer} from "react";
+export const addToCard = () => { console.log ()}
+export const delToCard = () => {}
 
 function Carritocompras() {
-  
-  const [numpro , setnumpro] = useState(1)
+ const [state, dispatch] = useReducer(CarritoReducer,carritoInitialState);  
+ const {products , cart} = state ;
+  const [numpro , setnumpro] = useState(1);
+  /*const addToCard = () => {}
+  const delToCard = () => {}  (NO SE SI VAYA AQUI O ARRIBA)*/
+
+  /*const [productList, setProductList] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch('https://run.mocky.io/v3/05e8172e-684f-494b-98f5-906e6564e8e0');
+        const data = await response.json();
+        setProductList(data);
+      } catch (error) {
+        console.error('Error al obtener los productos:', error);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
+  console.log(productList); // Muestra los productos en la consola */
+
 
   function Restar () { if(numpro>1) return setnumpro(numpro-1)}
   return (
