@@ -5,6 +5,7 @@ import Header from '../components/Header'
 import HeaderBotones from '@/components/HeaderBotones'
 import { IProducts } from '@/models/product';
 import {Products} from "@/components/Products";
+import UsuarioMiniMenu from '@/components/UsuarioMiniMenu';
 
 const Home = () => {
   const [filterCategory, setFilterCategory] = useState('');
@@ -31,6 +32,21 @@ const Home = () => {
             text="Perifericos"
             className={filterCategory === 'Perifericos' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
             onClick={() => handleClickCategory("Perifericos")}
+          />
+           <HeaderBotones
+            text="xxx"
+            className={filterCategory === 'xxx' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+            onClick={() => handleClickCategory("xxx")}
+          />
+           <HeaderBotones
+            text="zzz"
+            className={filterCategory === 'zzz' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+            onClick={() => handleClickCategory("zzz")}
+          />
+           <HeaderBotones
+            text="yyy"
+            className={filterCategory === 'yyy' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+            onClick={() => handleClickCategory("yyy")}
           />
         </div>
       </section>

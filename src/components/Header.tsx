@@ -35,15 +35,9 @@ const Header = () => {
             className="w-40 h-24 flex justify-end mr-4 space-x-2.5 items-center mobile3:space-x-2 tablet:w-[18%] laptop:w-[12%] laptopL:w-[8%]
         laptopL2:w-[8%] laptopL2:space-x-4"
           >
-            <Link href={"/login"}>
-                <Image
-                  className="h-[35px] w-[35px] cursor-pointer mt-[11px]  mobile2:h-[36px] mobile2:w-[36px] mobile3:h-[36px] mobile3:w-[36px] laptopL2:h-[45px] laptopL2:w-[45px]"
-                  src="/User.png"
-                  width={500}
-                  height={500}
-                  alt="Usuario"
-                />
-            </Link>
+
+            <UsuarioMiniMenu></UsuarioMiniMenu>
+ 
             <Link href={"/Cart"}> 
             <Image
                 className="h-[27px] w-[27px] mt-2.5 cursor-pointer mobile2:h-[28px] mobile2:w-[28px] mobile3:h-[28px] mobile3:w-[28px] laptopL2:h-[35px] laptopL2:w-[35px]"
@@ -54,7 +48,6 @@ const Header = () => {
               />
             
             </Link>
-             
  
           </div>
           
