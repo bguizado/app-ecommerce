@@ -18,7 +18,7 @@ export const Products = ({ filterCategory }: ProductsProps) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://run.mocky.io/v3/b3107a66-eb8c-492f-8a7b-e0d3ab628c78");
+        const response = await fetch("https://run.mocky.io/v3/5f7ba16f-566d-48bf-b17a-5186f6b65dfc");
         const data = await response.json();
         setProducts(data);
         console.log('Respuesta del API:', data);

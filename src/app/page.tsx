@@ -34,19 +34,14 @@ const Home = () => {
             onClick={() => handleClickCategory("Perifericos")}
           />
            <HeaderBotones
-            text="xxx"
-            className={filterCategory === 'xxx' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
-            onClick={() => handleClickCategory("xxx")}
+            text="Laptop"
+            className={filterCategory === 'Laptop' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+            onClick={() => handleClickCategory("Laptop")}
           />
            <HeaderBotones
-            text="zzz"
-            className={filterCategory === 'zzz' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
-            onClick={() => handleClickCategory("zzz")}
-          />
-           <HeaderBotones
-            text="yyy"
-            className={filterCategory === 'yyy' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
-            onClick={() => handleClickCategory("yyy")}
+            text="Componentes"
+            className={filterCategory === 'Componentes' ? 'bg-orange-300 text-white w-24' : 'bg-gray-300 text-gray-500 w-24'}
+            onClick={() => handleClickCategory("Componentes")}
           />
         </div>
       </section>
