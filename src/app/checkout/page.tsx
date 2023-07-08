@@ -1,15 +1,18 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useState, useRef } from "react";
 
 export default function CheckoutPage() {
     const [showPopup, setShowPopup] = useState(false);
+    const router = useRouter();
+    const popupRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         const handleOutsideClick = (event: MouseEvent) => {
             const targetElement = event.target as HTMLElement;
-            if (showPopup && targetElement && !targetElement.closest('.popup-content')) {
+
+            if (showPopup && targetElement && popupRef.current && !popupRef.current.contains(targetElement)) {
                 setShowPopup(false);
             }
         };
@@ -23,6 +26,11 @@ export default function CheckoutPage() {
 
     const togglePopup = () => {
         setShowPopup(!showPopup);
+    };
+
+    const handleContinueShopping = () => {
+        setShowPopup(false);
+        router.push("/");
     };
 
     return (
@@ -99,9 +107,7 @@ export default function CheckoutPage() {
                             />
                             <p className="text-3xl mt-2">¡Éxito!</p>
                             <p className="my-2">Su orden fue registrada</p>
-                            <Link href={"/"}>
-                            <button className="w-48 h-12 text-center inline-block bg-orange-400 hover:bg-green-700 text-white font-bold px-4 rounded-full" onClick={togglePopup}>Continuar comprando</button>
-                            </Link>
+                            <button className="w-48 h-12 text-center inline-block bg-orange-400 hover:bg-green-700 text-white font-bold px-4 rounded-full" onClick={handleContinueShopping}>Continuar comprando</button>
                         </div>
                     </div>
                 )}
