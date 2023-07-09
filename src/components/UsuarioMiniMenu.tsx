@@ -10,22 +10,26 @@ import LoginForm from "./LoginForm";
 
 const UsuarioMiniMenu = () => {
     const [expandir, setExpandir] = useState(false);
-    const [estado, setEstado] = useState<any | null>(null);
-    const [usuarioLogeado, setUsuarioLogeado] = useState(null);
+    const [estado, setEstado] = useState<any>();
+    const [usuarioLogeado, setUsuarioLogeado] = useState<any>();
     const router = useRouter() //Para navegar 
 
     
     useEffect(() => {
         const logeado = localStorage.getItem('logeado')
           if(logeado){
-             setEstado(JSON.parse(localStorage.getItem('logeado')))
+             setEstado(JSON.parse(logeado))
           }    
-        window.addEventListener('storage', () => setEstado(localStorage.getItem('logeado')));
-    }, [localStorage.getItem('logeado')]);
+        window.addEventListener('storage', () => setEstado(logeado));
+    }, []);
 
     useEffect(() => {
         const usuarioLogeado = localStorage.getItem('usuario')
-        setUsuarioLogeado(JSON.parse(localStorage.getItem('usuario')))
+        if(usuarioLogeado){
+            setUsuarioLogeado(JSON.parse(usuarioLogeado))
+         }   
+
+       
    }, []);
 
    //Para debug

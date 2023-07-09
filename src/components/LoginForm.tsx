@@ -11,10 +11,10 @@ const LoginForm = () => {
     useEffect(() => {
         const logeado = localStorage.getItem('logeado')
           if(logeado){
-             setEstado(JSON.parse(localStorage.getItem('logeado')))
+             setEstado(JSON.parse(logeado))
           }    
         //window.addEventListener('storage', () => setEstado(localStorage.getItem('logeado')));
-    }, [localStorage.getItem('logeado')]);
+    }, []);
 
 
     const [inputUsuario, setInputUsuario] = useState({
