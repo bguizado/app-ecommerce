@@ -49,6 +49,8 @@ export default async function Products() {
   //utilizar enmuns en lugar de comparcion de strings
   // const OFERTA = "oferta "
   const products = await getProducts();
+
+
   return (
     <section className="bg-white">
       <div>
@@ -56,8 +58,7 @@ export default async function Products() {
           Productos en oferta
         </h2>
         <Slider {...settings}>
-          {products
-            .filter(
+          {products?.filter(
               (product: IProducts) => product.tipos.at(0).clase === "oferta"
             )
             .map((product: IProducts) => (
@@ -70,8 +71,7 @@ export default async function Products() {
           Productos recomendados
         </h2>
         <Slider {...settings}>
-          {products
-            .filter(
+          {products?.filter(
               (product: IProducts) =>
                 product.tipos.at(0).clase === "recomendado"
             )
@@ -85,8 +85,7 @@ export default async function Products() {
           Productos destacados
         </h2>
         <Slider {...settings}>
-          {products
-            .filter(
+          {products?.filter(
               (product: IProducts) => product.tipos.at(0).clase === "destacado"
             )
             .map((product: IProducts) => (
