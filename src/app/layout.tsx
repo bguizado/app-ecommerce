@@ -2,6 +2,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LoginLayout from "./login/layout";
+import HeaderSinBusqueda from "@/components/HeaderSinBusqueda";
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -89,7 +91,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header></Header>
+          <Header></Header>
           {children}
         <Footer facebook={FacebookIcon()} instagram={InstagramIcon()} youtube={YoutubeIcon()} twitter={TwitterIcon()} alipay={AlipayIcon()} paypal={PaypalIcon()} stripe={StripeIcon()} />
       </body>

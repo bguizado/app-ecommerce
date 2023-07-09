@@ -1,11 +1,36 @@
-import { getProducts } from "../api/api";
+
 import { IProducts } from "@/models/product";
 import Cards from "@/components/Cards";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React, { useState, useEffect } from 'react';
+import Link from "next/link";
 
-export default async function Products() {
+type ProductsProps = {
+  filterCategory: string;
+};
+
+export const Products = ({ filterCategory }: ProductsProps) => {
+  
+  const [products, setProducts] = useState<any[]>([]); 
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("https://run.mocky.io/v3/5f7ba16f-566d-48bf-b17a-5186f6b65dfc");
+        const data = await response.json();
+        setProducts(data);
+        console.log('Respuesta del API:', data);
+      } catch (error) {
+        console.error('Error al obtener los datos del API:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   const settings = {
     infinite: true,
     speed: 300,
@@ -46,38 +71,58 @@ export default async function Products() {
     ],
   };
 
-  //utilizar enmuns en lugar de comparcion de strings
-  // const OFERTA = "oferta "
-  const products = await getProducts();
-
-
   return (
     <section className="bg-white">
       <div>
-        <h2 className="mt-10 ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
+        <h2 className="ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
           Productos en oferta
         </h2>
         <Slider {...settings}>
-          {products?.filter(
-              (product: IProducts) => product.tipos.at(0).clase === "oferta"
-            )
-            .map((product: IProducts) => (
-              <div key={product.id}>
-                <Cards item={product} />
-              </div>
-            ))}
+          {products
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "oferta";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "oferta" 
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "oferta" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
+            .map((product: IProducts) => {
+              return (
+                <div key={product.id}>
+                  <Cards item={product} />
+                </div>
+              );
+            })}
         </Slider>
         <h2 className="mt-10 ml-2 mb-3 font-bold text-xl sm:text-3xl text-[#99A4AC]">
           Productos recomendados
         </h2>
         <Slider {...settings}>
-          {products?.filter(
-              (product: IProducts) =>
-                product.tipos.at(0).clase === "recomendado"
-            )
+          {products
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "recomendado";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "recomendado" 
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "recomendado" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
             .map((product: IProducts) => (
               <div key={product.id}>
-                <Cards item={product} />
+                      <Cards item={product} />
               </div>
             ))}
         </Slider>
@@ -85,11 +130,23 @@ export default async function Products() {
           Productos destacados
         </h2>
         <Slider {...settings}>
-          {products?.filter(
-              (product: IProducts) => product.tipos.at(0).clase === "destacado"
-            )
+          {products
+            .filter((product: IProducts) => {
+              if (filterCategory === '') {
+                return product.tipos[0].clase === "destacado";
+              } else if (filterCategory === 'Todos') {
+                return (
+                  product.tipos[0].clase === "destacado" 
+                );
+              } else {
+                return (
+                  product.tipos[0].clase === "destacado" &&
+                  product.tipos[0].categoria === filterCategory
+                );
+              }
+            })
             .map((product: IProducts) => (
-              <div className="mb-20 " key={product.id}>
+              <div className="mb-20" key={product.id}>
                 <Cards item={product} />
               </div>
             ))}

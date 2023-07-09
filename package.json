@@ -23,6 +23,7 @@
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
+    "reactn": "^2.2.7",
     "slick-carousel": "^1.8.1",
     "tailwindcss": "3.3.2",
     "turbo": "^1.10.3",
