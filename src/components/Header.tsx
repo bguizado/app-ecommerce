@@ -1,9 +1,19 @@
-import React from "react";
+"use client"
+import React, {useContext, useState,useEffect} from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+import { Store } from "@/app/context/store";
 
 
 const Header = () => {
+  //const {state, dispatch}= useContext(Store)
+  //const {cart} = state
+  //const [cartItemscount, setcartItemscount] = useState(0)
+  //useEffect(()=> {
+    //setcartItemscount(cart.cartItems.reduce(( a , c )=> a + c.quantity, 0))
+  //},[cart.cartItems])
+  
   return (
     <>
       <div>

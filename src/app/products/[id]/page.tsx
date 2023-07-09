@@ -1,14 +1,24 @@
 'use client';
-import { useEffect, useState } from "react";
+import { useEffect, useState , useContext} from "react";
 import { IProducts } from "@/models/product";
 import Image from "next/image";
 import { StarIcon } from "@heroicons/react/20/solid";
 import Modal from "@/components/Modal";
 import Link from "next/link";
+import { Store } from "@/app/context/store";
+//inicar estado 
+const {state,dispatch}= useContext(Store) 
 
 const DetailProduct = ({ params }: { params: IProducts }) => {
   const [product, setProduct] = useState<IProducts | null>(null);
   const [showModal, setShowModal] = useState(false);
+  const addToCartHandler = () => {
+    const existItem = state.cart.cartItems.find( x => x.id === product?.id)
+    const quantity = existItem ? existItem.quantity + 1 : 1
+    dispatch({type: "CARD_ADD_ITEM", payload: {...product, quantity}})
+  }
+ const click = () => {addToCartHandler;() => setShowModal(true) }
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -66,7 +76,7 @@ const DetailProduct = ({ params }: { params: IProducts }) => {
              <div className="flex justify-center items-center h-[75px]">      
             <button
               className="bg-orange-400 font-bold text-white rounded-xl py-2 px-6  hover:bg-orange-500"
-              onClick={() => setShowModal(true)}
+              onClick={addToCartHandler}
             >
               Agregar al carrito
             </button>
